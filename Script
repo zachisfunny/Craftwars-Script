@@ -1,0 +1,48 @@
+local BooHub = loadstring(game:HttpGet("https://raw.githubusercontent.com/zachisfunny/BooHub/main/Boo"))()
+
+local UI = BooHub.Load({
+     Title = "👻 Boo Hub",
+     Style = 0,
+     SizeX = 400,
+     SizeY = 300,
+     Theme = "Dark"
+})
+
+local Page = UI.New({
+    Title = "Main"
+})
+
+Page.Label({
+    Text = "Made by ZACH.#6257"
+})
+
+Page.Button({ -- is a button
+    Text = "Cash",
+    Callback = function()
+        	local script = Instance.new('LocalScript')
+	script.Parent = cash
+ 		local cash = game.Players.LocalPlayer.leaderstats.Cash
+		cash.Value = cash.Value + 69000000000000
+    end
+})
+
+Page.Button({ -- is a button
+    Text = "All Items",
+    Callback = function()
+count=0
+for i=1,1000 do
+count=count+1
+game.Players.LocalPlayer.PlayerGui.Inventory.GuiControl:Invoke({command="insert", id = count})
+end
+    end
+})
+
+Page.Button({ -- is a button
+    Text = "Rank",
+    Callback = function()
+        	local script = Instance.new('LocalScript')
+	script.Parent = RANK
+		local rank = game.Players.LocalPlayer.leaderstats.Rank
+		rank.Value = rank.Value + 1000
+    end
+})
